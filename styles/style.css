@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 93px;
+  padding: 90px 50px 90px;
   font-size: 18px;
   line-height: 1.35;
   font-weight: 400;
@@ -21,7 +21,7 @@
   list-style: circle;
 }
 
-.header__links-list-item_no-bullit {
+.header__link_active {
   list-style: none;
   text-decoration: none;
 }
@@ -54,15 +54,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 125% auto;
-  max-height: 760px;
+  min-height: 760px;
   height: 100%;
   color: white;
   line-height: 1.3;
+  
 }
 
 .overlay {
   display: flex;
   position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgb(0 0 0 / 0.6);
@@ -72,7 +74,7 @@
 .cover-content {
   min-width: 100%;
   min-height: 100%;
-  padding: 155px 50px 50px 50px;
+  padding: 160px 50px 50px 50px;
   position: relative;
   z-index: 2;
 }
@@ -146,42 +148,40 @@
   gap: 25px;
 }
 
-.card {
+.lots__card-list-item {
   width: 334px;
   min-height: 596px;
   margin-top: 27px;
   position: relative;
-  flex-wrap: wrap;
   background-size: auto 100%;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.lots__card-list-item {
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-link {
@@ -229,7 +229,6 @@
   padding-left: 24px;
   padding-right: 25px;
   column-gap:25px;
-  min-height: 595px;
   min-width: 1052px;
 }
 
@@ -271,7 +270,7 @@
 }
 
 .footer {
-  padding: 0px 50px;
+  padding: 35px 50px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -279,7 +278,6 @@
   font-weight: 400;
   gap: 90px;
   min-width: 1100px;
-  min-height: 180px;
   margin-top: 143px;
   line-height: 1.35;
 }
@@ -294,6 +292,10 @@
 .footer__menu-list {
   list-style: none;
   line-height: 1.2;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
 }
 
 .footer__social-list {
